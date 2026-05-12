@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
 // Переводы
-// Переводы
 const translations = {
   ru: {
     nav: {
@@ -38,15 +37,12 @@ const translations = {
       'Печатная графика': 'Печатная графика'
     },
     projects: {
-      // Избранные
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
       f2: { title: "AUTOPART - онлайн магазин автозапчастей (сайт)", desc: "Прототип онлайн магазина автозапчастей в формате вайрфреймов и финальном виде." },
       f3: { title: "Картина мира - конкурсная работа (векторная иллюстрация)", desc: "Работа выполнена в программе Adobe Illutrator в векторной графике на конкурс от Комус Арт." },
       f4: { title: "EVENTIFLY - организация концертов (брендбук)", desc: "Брендбук для компании Eventifly." },
       f5: { title: "Океан (фото-коллаж)", desc: "Фото-коллаж с собственными фотографиями, может быть использован в качестве принта на одежду." },
       f6: { title: "Мошенники: инструкция по обезвреживанию (лонгрид)", desc: "Лонгрид на конкурс о том, как избежать мошеннических схем." },
-      
-      // Архив
       a72: { title: "Логотип и иконки для космической станции 'Галактика'", desc: "Разработка фирменного стиля космической станции." },
       a71: { title: "Дизайн упаковки для чая 'Тихий Сигнал'", desc: "Концепция упаковки премиального чая." },
       a70: { title: "Вёрстка газеты 'Северные Вести'", desc: "Макет регионального издания." },
@@ -155,15 +151,12 @@ const translations = {
       'Печатная графика': 'Print Graphics'
     },
     projects: {
-      // Featured
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
       f2: { title: "AUTOPART - online auto parts store (website)", desc: "Online auto parts store prototype in wireframe and final format." },
       f3: { title: "World Picture - competition work (vector illustration)", desc: "Vector graphics work created in Adobe Illustrator for Komus Art competition." },
       f4: { title: "EVENTIFLY - concert organization (brandbook)", desc: "Brandbook for Eventifly company." },
       f5: { title: "Ocean (photo collage)", desc: "Photo collage with own photographs, can be used as clothing print." },
       f6: { title: "Scammers: neutralization guide (longread)", desc: "Competition longread about avoiding scam schemes." },
-      
-      // Archive
       a72: { title: "Logo and icons for space station 'Galaxy'", desc: "Corporate identity development for space station." },
       a71: { title: "Tea packaging design 'Silent Signal'", desc: "Premium tea packaging concept." },
       a70: { title: "Newspaper layout 'Northern News'", desc: "Regional publication layout." },
@@ -268,104 +261,97 @@ const App = () => {
   
   const t = translations[lang];
 
+  // ─────────────────────────────────────────────────────────────────────────────
+  // ВАЖНО: все пути начинаются с  images/...  (без слэша в начале и без my-portfolio/)
+  // Папка public/ — это корень сайта на GitHub Pages, React сам её подставляет.
+  // ─────────────────────────────────────────────────────────────────────────────
   const projectsData = useMemo(() => ({
     featured: [
-      { id: 'f1', cat: "Веб-дизайн", year: 2025, img: "/my-portfolio/images/избранное/5.png", pdf: "/my-portfolio/images/избранное/autohub/autohub.pdf" },
-      { id: 'f2', cat: "Веб-дизайн", year: 2025, img: "/my-portfolio/images/избранное/4.png", pdf: "/my-portfolio/images/избранное/autopart/autopart.pdf" },
-      { id: 'f3', cat: "Веб-дизайн", year: 2025, img: "/my-portfolio/images/избранное/1.png", pdf: "/my-portfolio/images/избранное/mir/картина мира.pdf" },
-      { id: 'f4', cat: "Айдентика", year: 2025, img: "/my-portfolio/images/избранное/2.png", pdf: "/my-portfolio/images/избранное/eventifly/eventifly.pdf" },
-      { id: 'f5', cat: "Печатная графика", year: 2025, img: "/my-portfolio/images/океан/1.png", pdf: "/my-portfolio/images/океан/2.pdf" },
-      { id: 'f6', cat: "Веб-дизайн", year: 2025, img: "/my-portfolio/images/избранное/лонгрид/1.png", pdf: "/my-portfolio/images/избранное/лонгрид/2.pdf" },
+      { id: 'f1', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/5.png",            pdf: "images/избранное/autohub/autohub.pdf" },
+      { id: 'f2', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/4.png",            pdf: "images/избранное/autopart/autopart.pdf" },
+      { id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
+      { id: 'f4', cat: "Айдентика",        year: 2025, img: "images/избранное/2.png",            pdf: "images/избранное/eventifly/eventifly.pdf" },
+      { id: 'f5', cat: "Печатная графика", year: 2025, img: "images/океан/1.png",                pdf: "images/океан/2.pdf" },
+      { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
-      { id: 'a72', cat: "Айдентика", year: 2026, img: "my-portfolio/images/космическая станция/1.png", pdf: "my-portfolio/images/космическая станция/2.pdf" },
-      { id: 'a71', cat: "Печатная графика", year: 2026, img: "my-portfolio/images/тихий сигнал/1.png", pdf: "my-portfolio/images/тихий сигнал/2.pdf" },
-      { id: 'a70', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/северные вести/1.png", pdf: "my-portfolio/images/северные вести/2.pdf" },
-      { id: 'a69', cat: "Печатная графика", year: 2026, img: "my-portfolio/images/фундуклеевка/1.png", pdf: "my-portfolio/images/фундуклеевка/2.pdf" },
-      { id: 'a68', cat: "Веб-дизайн", year: 2026, img: "my-portfolio/images/travelmood/1.png", pdf: "my-portfolio/images/travelmood/2.pdf" },
-      { id: 'a67', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/я+моидрузья/1.png", pdf: "my-portfolio/images/я+моидрузья/2.pdf" },
-      { id: 'a66', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/дипломы/1.png", pdf: "my-portfolio/images/дипломы/2.pdf" },
-      { id: 'a65', cat: "Айдентика", year: 2025, img: "my-portfolio/images/qarma/1.png", pdf: "my-portfolio/images/qarma/2.pdf" },
-      { id: 'a64', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/плакат день учителя/1.png", pdf: "my-portfolio/images/плакат день учителя/2.pdf" },
-      { id: 'a63', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/листовка китай/1.png", pdf: "my-portfolio/images/листовка китай/2.pdf" },
-      { id: 'a62', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/престиж/1.png", pdf: "my-portfolio/images/престиж/2.pdf" },
-      { id: 'a61', cat: "Логотипы", year: 2025, img: "my-portfolio/images/aboutzoo/1.png", pdf: "my-portfolio/images/aboutzoo/2.pdf" },
-      { id: 'a60', cat: "Айдентика", year: 2025, img: "my-portfolio/images/cheesedog/1.png", pdf: "my-portfolio/images/cheesedog/2.pdf" },
-      { id: 'a59', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/кафе с корицей/1.png", pdf: "my-portfolio/images/кафе с корицей/2.pdf" },
-      { id: 'a58', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/осенний фестиваль/1.png", pdf: "my-portfolio/images/осенний фестиваль/2.pdf" },
-      { id: 'a57', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/учебная практика/1.jpg", pdf: "my-portfolio/images/учебная практика/2.pdf" },
-      { id: 'a56', cat: "Айдентика", year: 2025, img: "my-portfolio/images/зеленый луч/1.png", pdf: "my-portfolio/images/зеленый луч/2.pdf" },
-      { id: 'a55', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/мемфис/1.png", pdf: "my-portfolio/images/мемфис/2.pdf" },
-      { id: 'a54', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/диаграмма пушкинский/1.png", pdf: "my-portfolio/images/диаграмма пушкинский/2.pdf" },
-      { id: 'a53', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/диаграмма шаболовка/1.png", pdf: "my-portfolio/images/диаграмма шаболовка/2.pdf" },
-      { id: 'a52', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/коллаж/1.png", pdf: "my-portfolio/images/коллаж/2.pdf" },
-      { id: 'a51', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/платок/1.jpg", pdf: "my-portfolio/images/платок/2.pdf" },
-      { id: 'a50', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/практика 2024/1.png", pdf: "my-portfolio/images/практика 2024/2.pdf" },
-      { id: 'a49', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/плакаты/1.png", pdf: "my-portfolio/images/плакаты/2.pdf" },
-      { id: 'a48', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/морская симфония/1.png", pdf: "my-portfolio/images/морская симфония/2.pdf" },
-      { id: 'a47', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/conception/1.png", pdf: "my-portfolio/images/conception/2.pdf" },
-      { id: 'a46', cat: "Айдентика", year: 2025, img: "my-portfolio/images/glitch/1.png", pdf: "my-portfolio/images/glitch/2.pdf" },
-      { id: 'a45', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/хлеб/1.jpg", pdf: "my-portfolio/images/хлеб/2.pdf" },
-      { id: 'a44', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/монохром/1.jpg", pdf: "my-portfolio/images/монохром/2.pdf" },
-      { id: 'a43', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/день открытых дверей/1.png", pdf: "my-portfolio/images/день открытых дверей/2.pdf" },
-      { id: 'a42', cat: "Айдентика", year: 2025, img: "my-portfolio/images/гастроарт/1.png", pdf: "my-portfolio/images/гастроарт/2.pdf" },
-      { id: 'a41', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/пейзаж/1.jpg", pdf: "my-portfolio/images/пейзаж/2.pdf" },
-      { id: 'a40', cat: "Логотипы", year: 2025, img: "my-portfolio/images/профмед/1.jpg", pdf: "my-portfolio/images/профмед/2.pdf" },
-      { id: 'a39', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/сила винила/1.png", pdf: "my-portfolio/images/сила винила/2.pdf" },
-      { id: 'a38', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/open voice/1.jpg", pdf: "my-portfolio/images/open voice/2.pdf" },
-      { id: 'a37', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/портфолио пиксель/1.png", pdf: "my-portfolio/images/портфолио пиксель/2.pdf" },
-      { id: 'a36', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/календарь перекидной/1.jpg", pdf: "my-portfolio/images/календарь перекидной/2.pdf" },
-      { id: 'a35', cat: "Айдентика", year: 2025, img: "my-portfolio/images/визитка дизайнера/1.jpg", pdf: "my-portfolio/images/визитка дизайнера/2.pdf" },
-      { id: 'a34', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/майнкрафт/1.png", pdf: "my-portfolio/images/майнкрафт/2.pdf" },
-      { id: 'a33', cat: "Веб-дизайн", year: 2025, img: "my-portfolio/images/гиф/1.png", pdf: "my-portfolio/images/гиф/2.pdf" },
-      { id: 'a32', cat: "Айдентика", year: 2025, img: "my-portfolio/images/кубомедуза/1.jpg", pdf: "my-portfolio/images/кубомедуза/2.pdf" },
-      { id: 'a31', cat: "Логотипы", year: 2025, img: "my-portfolio/images/гилиутас/1.jpg", pdf: "my-portfolio/images/гилиутас/2.pdf" },
-      { id: 'a30', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/календарь карманный/1.jpg", pdf: "my-portfolio/images/календарь карманный/2.pdf" },
-      { id: 'a29', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/открытка/1.png", pdf: "my-portfolio/images/открытка/2.pdf" },
-      { id: 'a28', cat: "Айдентика", year: 2025, img: "my-portfolio/images/движение вверх/1.jpg", pdf: "my-portfolio/images/движение вверх/2.pdf" },
-      { id: 'a27', cat: "Логотипы", year: 2025, img: "my-portfolio/images/барс/1.jpg", pdf: "my-portfolio/images/барс/2.pdf" },
-      { id: 'a26', cat: "Айдентика", year: 2025, img: "my-portfolio/images/мои мысли/1.jpg", pdf: "my-portfolio/images/мои мысли/2.pdf" },
-      { id: 'a25', cat: "Печатная графика", year: 2025, img: "my-portfolio/images/галафест/1.png", pdf: "my-portfolio/images/галафест/2.pdf" },
-      { id: 'a24', cat: "Айдентика", year: 2024, img: "my-portfolio/images/омега/1.png", pdf: "my-portfolio/images/омега/2.pdf" },
-      { id: 'a23', cat: "Айдентика", year: 2024, img: "my-portfolio/images/свимли/1.jpg", pdf: "my-portfolio/images/свимли/2.pdf" },
-      { id: 'a22', cat: "Айдентика", year: 2024, img: "my-portfolio/images/визитка тюнинг/1.jpg", pdf: "my-portfolio/images/визитка тюнинг/2.pdf" },
-      { id: 'a21', cat: "Айдентика", year: 2024, img: "my-portfolio/images/визитка бровиста/1.jpg", pdf: "my-portfolio/images/визитка бровиста/2.pdf" },
-      { id: 'a20', cat: "Айдентика", year: 2024, img: "my-portfolio/images/визитки маме/1.jpg", pdf: "my-portfolio/images/визитки маме/2.pdf" },
-      { id: 'a19', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/заколки/1.jpg", pdf: "my-portfolio/images/заколки/2.pdf" },
-      { id: 'a18', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/шиповник/1.jpg", pdf: "my-portfolio/images/шиповник/2.pdf" },
-      { id: 'a17', cat: "Логотипы", year: 2024, img: "my-portfolio/images/ии/1.jpg", pdf: "my-portfolio/images/ии/2.pdf" },
-      { id: 'a16', cat: "Айдентика", year: 2024, img: "my-portfolio/images/перчик/1.jpg", pdf: "my-portfolio/images/перчик/2.pdf" },
-      { id: 'a15', cat: "Айдентика", year: 2024, img: "my-portfolio/images/sharpinion/1.jpg", pdf: "my-portfolio/images/sharpinion/2.pdf" },
-      { id: 'a14', cat: "Айдентика", year: 2024, img: "my-portfolio/images/one/1.jpg", pdf: "my-portfolio/images/one/2.pdf" },
-      { id: 'a13', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/рецепты/1.png", pdf: "my-portfolio/images/рецепты/2.pdf" },
-      { id: 'a12', cat: "Айдентика", year: 2024, img: "my-portfolio/images/forge/1.jpg", pdf: "my-portfolio/images/forge/2.pdf" },
-      { id: 'a11', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/ithub/1.jpg", pdf: "my-portfolio/images/ithub/2.pdf" },
-      { id: 'a10', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/самокаты/1.jpg", pdf: "my-portfolio/images/самокаты/2.pdf" },
-      { id: 'a9', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/театр/1.png", pdf: "my-portfolio/images/театр/2.pdf" },
-      { id: 'a8', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/абстракция/1.png", pdf: "my-portfolio/images/абстракция/2.pdf" },
-      { id: 'a7', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/шар/1.jpg", pdf: "my-portfolio/images/шар/2.pdf" },
-      { id: 'a6', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/шенк/1.png", pdf: "my-portfolio/images/шенк/2.pdf" },
-      { id: 'a5', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/шоколад/1.jpg", pdf: "my-portfolio/images/шоколад/2.pdf" },
-      { id: 'a3', cat: "Печатная графика", year: 2024, img: "my-portfolio/images/turtles/1.jpg", pdf: "my-portfolio/images/turtles/2.pdf" },
-      { id: 'a2', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/pawerful/1.png", pdf: "my-portfolio/images/pawerful/2.pdf" },
-      { id: 'a1', cat: "Веб-дизайн", year: 2024, img: "my-portfolio/images/портфолио 2024/1.jpg", pdf: "my-portfolio/images/портфолио 2024/2.pdf" },
+      { id: 'a72', cat: "Айдентика",        year: 2026, img: "images/космическая станция/1.png",  pdf: "images/космическая станция/2.pdf" },
+      { id: 'a71', cat: "Печатная графика", year: 2026, img: "images/тихий сигнал/1.png",        pdf: "images/тихий сигнал/2.pdf" },
+      { id: 'a70', cat: "Печатная графика", year: 2025, img: "images/северные вести/1.png",       pdf: "images/северные вести/2.pdf" },
+      { id: 'a69', cat: "Печатная графика", year: 2026, img: "images/фундуклеевка/1.png",         pdf: "images/фундуклеевка/2.pdf" },
+      { id: 'a68', cat: "Веб-дизайн",       year: 2026, img: "images/travelmood/1.png",           pdf: "images/travelmood/2.pdf" },
+      { id: 'a67', cat: "Веб-дизайн",       year: 2025, img: "images/я+моидрузья/1.png",          pdf: "images/я+моидрузья/2.pdf" },
+      { id: 'a66', cat: "Печатная графика", year: 2025, img: "images/дипломы/1.png",              pdf: "images/дипломы/2.pdf" },
+      { id: 'a65', cat: "Айдентика",        year: 2025, img: "images/qarma/1.png",                pdf: "images/qarma/2.pdf" },
+      { id: 'a64', cat: "Печатная графика", year: 2025, img: "images/плакат день учителя/1.png",  pdf: "images/плакат день учителя/2.pdf" },
+      { id: 'a63', cat: "Печатная графика", year: 2025, img: "images/листовка китай/1.png",       pdf: "images/листовка китай/2.pdf" },
+      { id: 'a62', cat: "Печатная графика", year: 2025, img: "images/престиж/1.png",              pdf: "images/престиж/2.pdf" },
+      { id: 'a61', cat: "Логотипы",         year: 2025, img: "images/aboutzoo/1.png",             pdf: "images/aboutzoo/2.pdf" },
+      { id: 'a60', cat: "Айдентика",        year: 2025, img: "images/cheesedog/1.png",            pdf: "images/cheesedog/2.pdf" },
+      { id: 'a59', cat: "Печатная графика", year: 2025, img: "images/кафе с корицей/1.png",       pdf: "images/кафе с корицей/2.pdf" },
+      { id: 'a58', cat: "Печатная графика", year: 2025, img: "images/осенний фестиваль/1.png",    pdf: "images/осенний фестиваль/2.pdf" },
+      { id: 'a57', cat: "Веб-дизайн",       year: 2025, img: "images/учебная практика/1.jpg",     pdf: "images/учебная практика/2.pdf" },
+      { id: 'a56', cat: "Айдентика",        year: 2025, img: "images/зеленый луч/1.png",          pdf: "images/зеленый луч/2.pdf" },
+      { id: 'a55', cat: "Веб-дизайн",       year: 2025, img: "images/мемфис/1.png",               pdf: "images/мемфис/2.pdf" },
+      { id: 'a54', cat: "Веб-дизайн",       year: 2025, img: "images/диаграмма пушкинский/1.png", pdf: "images/диаграмма пушкинский/2.pdf" },
+      { id: 'a53', cat: "Веб-дизайн",       year: 2025, img: "images/диаграмма шаболовка/1.png",  pdf: "images/диаграмма шаболовка/2.pdf" },
+      { id: 'a52', cat: "Веб-дизайн",       year: 2025, img: "images/коллаж/1.png",               pdf: "images/коллаж/2.pdf" },
+      { id: 'a51', cat: "Печатная графика", year: 2025, img: "images/платок/1.jpg",               pdf: "images/платок/2.pdf" },
+      { id: 'a50', cat: "Веб-дизайн",       year: 2025, img: "images/практика 2024/1.png",        pdf: "images/практика 2024/2.pdf" },
+      { id: 'a49', cat: "Печатная графика", year: 2025, img: "images/плакаты/1.png",              pdf: "images/плакаты/2.pdf" },
+      { id: 'a48', cat: "Печатная графика", year: 2025, img: "images/морская симфония/1.png",     pdf: "images/морская симфония/2.pdf" },
+      { id: 'a47', cat: "Печатная графика", year: 2025, img: "images/conception/1.png",           pdf: "images/conception/2.pdf" },
+      { id: 'a46', cat: "Айдентика",        year: 2025, img: "images/glitch/1.png",               pdf: "images/glitch/2.pdf" },
+      { id: 'a45', cat: "Печатная графика", year: 2025, img: "images/хлеб/1.jpg",                 pdf: "images/хлеб/2.pdf" },
+      { id: 'a44', cat: "Веб-дизайн",       year: 2025, img: "images/монохром/1.jpg",             pdf: "images/монохром/2.pdf" },
+      { id: 'a43', cat: "Печатная графика", year: 2025, img: "images/день открытых дверей/1.png", pdf: "images/день открытых дверей/2.pdf" },
+      { id: 'a42', cat: "Айдентика",        year: 2025, img: "images/гастроарт/1.png",            pdf: "images/гастроарт/2.pdf" },
+      { id: 'a41', cat: "Веб-дизайн",       year: 2025, img: "images/пейзаж/1.jpg",               pdf: "images/пейзаж/2.pdf" },
+      { id: 'a40', cat: "Логотипы",         year: 2025, img: "images/профмед/1.jpg",              pdf: "images/профмед/2.pdf" },
+      { id: 'a39', cat: "Печатная графика", year: 2025, img: "images/сила винила/1.png",          pdf: "images/сила винила/2.pdf" },
+      { id: 'a38', cat: "Печатная графика", year: 2025, img: "images/open voice/1.jpg",           pdf: "images/open voice/2.pdf" },
+      { id: 'a37', cat: "Веб-дизайн",       year: 2025, img: "images/портфолио пиксель/1.png",    pdf: "images/портфолио пиксель/2.pdf" },
+      { id: 'a36', cat: "Печатная графика", year: 2025, img: "images/календарь перекидной/1.jpg", pdf: "images/календарь перекидной/2.pdf" },
+      { id: 'a35', cat: "Айдентика",        year: 2025, img: "images/визитка дизайнера/1.jpg",    pdf: "images/визитка дизайнера/2.pdf" },
+      { id: 'a34', cat: "Веб-дизайн",       year: 2025, img: "images/майнкрафт/1.png",            pdf: "images/майнкрафт/2.pdf" },
+      { id: 'a33', cat: "Веб-дизайн",       year: 2025, img: "images/гиф/1.png",                  pdf: "images/гиф/2.pdf" },
+      { id: 'a32', cat: "Айдентика",        year: 2025, img: "images/кубомедуза/1.jpg",           pdf: "images/кубомедуза/2.pdf" },
+      { id: 'a31', cat: "Логотипы",         year: 2025, img: "images/гилиутас/1.jpg",             pdf: "images/гилиутас/2.pdf" },
+      { id: 'a30', cat: "Печатная графика", year: 2025, img: "images/календарь карманный/1.jpg",  pdf: "images/календарь карманный/2.pdf" },
+      { id: 'a29', cat: "Печатная графика", year: 2025, img: "images/открытка/1.png",             pdf: "images/открытка/2.pdf" },
+      { id: 'a28', cat: "Айдентика",        year: 2025, img: "images/движение вверх/1.jpg",       pdf: "images/движение вверх/2.pdf" },
+      { id: 'a27', cat: "Логотипы",         year: 2025, img: "images/барс/1.jpg",                 pdf: "images/барс/2.pdf" },
+      { id: 'a26', cat: "Айдентика",        year: 2025, img: "images/мои мысли/1.jpg",            pdf: "images/мои мысли/2.pdf" },
+      { id: 'a25', cat: "Печатная графика", year: 2025, img: "images/галафест/1.png",             pdf: "images/галафест/2.pdf" },
+      { id: 'a24', cat: "Айдентика",        year: 2024, img: "images/омега/1.png",                pdf: "images/омега/2.pdf" },
+      { id: 'a23', cat: "Айдентика",        year: 2024, img: "images/свимли/1.jpg",               pdf: "images/свимли/2.pdf" },
+      { id: 'a22', cat: "Айдентика",        year: 2024, img: "images/визитка тюнинг/1.jpg",       pdf: "images/визитка тюнинг/2.pdf" },
+      { id: 'a21', cat: "Айдентика",        year: 2024, img: "images/визитка бровиста/1.jpg",     pdf: "images/визитка бровиста/2.pdf" },
+      { id: 'a20', cat: "Айдентика",        year: 2024, img: "images/визитки маме/1.jpg",         pdf: "images/визитки маме/2.pdf" },
+      { id: 'a19', cat: "Веб-дизайн",       year: 2024, img: "images/заколки/1.jpg",              pdf: "images/заколки/2.pdf" },
+      { id: 'a18', cat: "Веб-дизайн",       year: 2024, img: "images/шиповник/1.jpg",             pdf: "images/шиповник/2.pdf" },
+      { id: 'a17', cat: "Логотипы",         year: 2024, img: "images/ии/1.jpg",                   pdf: "images/ии/2.pdf" },
+      { id: 'a16', cat: "Айдентика",        year: 2024, img: "images/перчик/1.jpg",               pdf: "images/перчик/2.pdf" },
+      { id: 'a15', cat: "Айдентика",        year: 2024, img: "images/sharpinion/1.jpg",           pdf: "images/sharpinion/2.pdf" },
+      { id: 'a14', cat: "Айдентика",        year: 2024, img: "images/one/1.jpg",                  pdf: "images/one/2.pdf" },
+      { id: 'a13', cat: "Печатная графика", year: 2024, img: "images/рецепты/1.png",              pdf: "images/рецепты/2.pdf" },
+      { id: 'a12', cat: "Айдентика",        year: 2024, img: "images/forge/1.jpg",                pdf: "images/forge/2.pdf" },
+      { id: 'a11', cat: "Печатная графика", year: 2024, img: "images/ithub/1.jpg",                pdf: "images/ithub/2.pdf" },
+      { id: 'a10', cat: "Печатная графика", year: 2024, img: "images/самокаты/1.jpg",             pdf: "images/самокаты/2.pdf" },
+      { id: 'a9',  cat: "Печатная графика", year: 2024, img: "images/театр/1.png",                pdf: "images/театр/2.pdf" },
+      { id: 'a8',  cat: "Печатная графика", year: 2024, img: "images/абстракция/1.png",           pdf: "images/абстракция/2.pdf" },
+      { id: 'a7',  cat: "Веб-дизайн",       year: 2024, img: "images/шар/1.jpg",                  pdf: "images/шар/2.pdf" },
+      { id: 'a6',  cat: "Веб-дизайн",       year: 2024, img: "images/шенк/1.png",                 pdf: "images/шенк/2.pdf" },
+      { id: 'a5',  cat: "Печатная графика", year: 2024, img: "images/шоколад/1.jpg",              pdf: "images/шоколад/2.pdf" },
+      { id: 'a3',  cat: "Печатная графика", year: 2024, img: "images/turtles/1.jpg",              pdf: "images/turtles/2.pdf" },
+      { id: 'a2',  cat: "Веб-дизайн",       year: 2024, img: "images/pawerful/1.png",             pdf: "images/pawerful/2.pdf" },
+      { id: 'a1',  cat: "Веб-дизайн",       year: 2024, img: "images/портфолио 2024/1.jpg",       pdf: "images/портфолио 2024/2.pdf" },
     ]
   }), []);
 
-  const getProjectTitle = (project) => {
-    return t.projects[project.id]?.title || project.id;
-  };
-
-  const getProjectDesc = (project) => {
-    if (t.projects[project.id]?.desc) {
-      return t.projects[project.id].desc;
-    }
-    return t.modal.archiveWork;
-  };
-
-  const getCategoryName = (cat) => {
-    return t.categories[cat] || cat;
-  };
+  const getProjectTitle = (project) => t.projects[project.id]?.title || project.id;
+  const getProjectDesc  = (project) => t.projects[project.id]?.desc  || '';
+  const getCategoryName = (cat)     => t.categories[cat] || cat;
 
   const filterFn = (p) => {
     if (filter === 0) return true;
@@ -374,7 +360,7 @@ const App = () => {
   };
 
   const filteredFeatured = projectsData.featured.filter(filterFn);
-  const filteredArchive = projectsData.archive.filter(filterFn);
+  const filteredArchive  = projectsData.archive.filter(filterFn);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -384,9 +370,7 @@ const App = () => {
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      window.scrollTo({ top: el.offsetTop - 140, behavior: 'smooth' });
-    }
+    if (el) window.scrollTo({ top: el.offsetTop - 140, behavior: 'smooth' });
   };
 
   return (
@@ -407,10 +391,7 @@ const App = () => {
               <button onClick={() => scrollTo('contact')}>{t.nav.contact}</button>
             </nav>
             <div className="header-icons">
-              <button 
-                onClick={() => setLang(lang === 'ru' ? 'en' : 'ru')} 
-                className="lang-toggle"
-              >
+              <button onClick={() => setLang(lang === 'ru' ? 'en' : 'ru')} className="lang-toggle">
                 {lang === 'ru' ? 'EN' : 'RU'}
               </button>
               <a href="https://t.me/renraie" target="_blank" rel="noreferrer" className="glass-icon"><Icon name="telegram"/></a>
@@ -471,7 +452,7 @@ const App = () => {
               {filteredArchive.map((project) => (
                 <div key={project.id} className="archive-item" onClick={() => setSelectedProject(project)}>
                   <div className="archive-img-box">
-                      <img src={project.img} alt={getProjectTitle(project)} />
+                    <img src={project.img} alt={getProjectTitle(project)} />
                   </div>
                   <div className="archive-info">
                     <h4>{getProjectTitle(project)}</h4>
@@ -495,22 +476,21 @@ const App = () => {
                 <p>{getProjectDesc(selectedProject)}</p>
                 <div className="modal-year">{t.modal.year}: {selectedProject.year}</div>
               </div>
-            <div className="modal-viewer">
-              {selectedProject.pdf && selectedProject.pdf.endsWith('.pdf') ? (
-                <iframe src={selectedProject.pdf} title="PDF" width="100%" height="100%" />
-              ) : 
-              Array.isArray(selectedProject.gallery) ? (
-                <div className="modal-gallery">
-                  {selectedProject.gallery.map((image, index) => (
-                    <img key={index} src={image} alt={`slide-${index}`} className="gallery-img" />
-                  ))}
-                </div>
-              ) : (
-                <div className="pdf-placeholder">
-                  <img src={selectedProject.img} alt="preview" />
-                  <p>{lang === 'ru' ? 'Презентация загружается или в разработке' : 'Presentation loading or in development'}</p>
-                </div>
-              )}
+              <div className="modal-viewer">
+                {selectedProject.pdf && selectedProject.pdf.endsWith('.pdf') ? (
+                  <iframe src={selectedProject.pdf} title="PDF" width="100%" height="100%" />
+                ) : Array.isArray(selectedProject.gallery) ? (
+                  <div className="modal-gallery">
+                    {selectedProject.gallery.map((image, index) => (
+                      <img key={index} src={image} alt={`slide-${index}`} className="gallery-img" />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="pdf-placeholder">
+                    <img src={selectedProject.img} alt="preview" />
+                    <p>{lang === 'ru' ? 'Презентация загружается или в разработке' : 'Presentation loading or in development'}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -541,21 +521,8 @@ const App = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;600&display=swap');
 
-.modal-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  overflow-y: auto;
-  height: 100%;
-}
-
-.gallery-img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
+        .modal-gallery { display: flex; flex-direction: column; gap: 20px; padding: 20px; overflow-y: auto; height: 100%; }
+        .gallery-img { width: 100%; height: auto; border-radius: 12px; display: block; }
   
         :root {
           --bg: #08080a; --accent: #ffb3d9; --text: #ffffff;
@@ -580,27 +547,8 @@ const App = () => {
         .header-icons { display: flex; gap: 10px; }
         .glass-icon { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid var(--glass-border); color: var(--text-dim); transition: 0.3s; text-decoration: none; }
         .glass-icon:hover { background: var(--accent); color: #000; }
-        
-        .lang-toggle {
-          width: 38px;
-          height: 38px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 12px;
-          border: 1px solid var(--glass-border);
-          background: var(--glass);
-          color: var(--text);
-          font-size: 11px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: 0.3s;
-          font-family: inherit;
-        }
-        .lang-toggle:hover {
-          background: var(--accent);
-          color: #000;
-        }
+        .lang-toggle { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--glass); color: var(--text); font-size: 11px; font-weight: 600; cursor: pointer; transition: 0.3s; font-family: inherit; }
+        .lang-toggle:hover { background: var(--accent); color: #000; }
 
         .filter-bar { margin-top: 20px; }
         .filter-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 8px; }
@@ -610,71 +558,17 @@ const App = () => {
         .hero-section { max-width: 1200px; margin: 0 auto; padding: 280px 50px 150px; }
         .reveal-text { font-family: 'Playfair Display', serif; font-size: clamp(45px, 8vw, 100px); line-height: 1; margin-bottom: 40px; }
         .italic-accent { font-style: italic; color: var(--accent); }
-        .outline-text { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3); }
 
         .projects-section { max-width: 1200px; margin: 0 auto; padding: 0 50px 150px; }
         .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px 40px; }
-        .project-card { 
-          cursor: pointer; 
-          opacity: 0; 
-          animation: fadeInUp 0.8s forwards; 
-          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .project-card:hover {
-          transform: translateY(-15px) scale(1.02);
-          z-index: 10;
-        }
-
-        .project-card:nth-child(even):not(:hover) { 
-          transform: translateY(60px); 
-        }
-
-        .img-container { 
-          position: relative; 
-          border-radius: 32px; 
-          overflow: hidden; 
-          aspect-ratio: 16/11; 
-          border: 1px solid var(--glass-border); 
-          transition: all 0.5s ease;
-        }
-
-        .project-card:hover .img-container {
-          border-color: var(--accent);
-          box-shadow: 0 20px 60px rgba(255, 179, 217, 0.2);
-        }
-
-        .img-container img { 
-          width: 100%; 
-          height: 100%; 
-          object-fit: cover; 
-          transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1); 
-          filter: saturate(0.8); 
-        }
-
-        .img-overlay { 
-          position: absolute; 
-          inset: 0; 
-          background: rgba(0,0,0,0.2); 
-          display: flex; 
-          align-items: center; 
-          justify-content: center; 
-          opacity: 0; 
-          transition: 0.4s; 
-          backdrop-filter: blur(4px); 
-        }
-
-        .img-overlay span { 
-          padding: 12px 24px; 
-          border-radius: 30px; 
-          background: #fff; 
-          color: #000; 
-          font-size: 12px; 
-          font-weight: 600; 
-          transform: translateY(20px);
-          transition: 0.4s ease;
-        }
-
+        .project-card { cursor: pointer; opacity: 0; animation: fadeInUp 0.8s forwards; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .project-card:hover { transform: translateY(-15px) scale(1.02); z-index: 10; }
+        .project-card:nth-child(even):not(:hover) { transform: translateY(60px); }
+        .img-container { position: relative; border-radius: 32px; overflow: hidden; aspect-ratio: 16/11; border: 1px solid var(--glass-border); transition: all 0.5s ease; }
+        .project-card:hover .img-container { border-color: var(--accent); box-shadow: 0 20px 60px rgba(255, 179, 217, 0.2); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1); filter: saturate(0.8); }
+        .img-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.4s; backdrop-filter: blur(4px); }
+        .img-overlay span { padding: 12px 24px; border-radius: 30px; background: #fff; color: #000; font-size: 12px; font-weight: 600; transform: translateY(20px); transition: 0.4s ease; }
         .project-card:hover .img-overlay { opacity: 1; }
         .project-card:hover .img-overlay span { transform: translateY(0); }
         .project-card:hover img { transform: scale(1.1); filter: saturate(1.1); }
@@ -717,106 +611,42 @@ const App = () => {
         .footer-status::before { content: ''; width: 6px; height: 6px; background: #00ffaa; border-radius: 50%; box-shadow: 0 0 10px #00ffaa; }
 
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* МОБИЛЬНАЯ АДАПТАЦИЯ */
+
         @media (max-width: 768px) {
           .header-fixed-block { padding: 10px 15px; }
           .header { padding: 15px 20px; border-radius: 16px; }
           .header-shrink { padding: 10px 20px; }
-          
           .logo { font-size: 10px; letter-spacing: 0.05em; }
           .logo-dot { width: 4px; height: 4px; }
-          
           .desktop-nav { display: none; }
-          
           .header-icons { gap: 8px; }
           .glass-icon { width: 32px; height: 32px; }
           .lang-toggle { width: 32px; height: 32px; font-size: 10px; }
-          
           .filter-bar { margin-top: 10px; }
-          .filter-inner { 
-            gap: 6px; 
-            flex-wrap: wrap; 
-            padding: 0 15px;
-          }
-          .filter-tag { 
-            padding: 8px 14px; 
-            font-size: 10px; 
-            border-radius: 10px;
-          }
-          
-          .hero-section { 
-            padding: 180px 25px 80px; 
-          }
-          .reveal-text { 
-            font-size: 36px; 
-            margin-bottom: 25px;
-          }
+          .filter-inner { gap: 6px; flex-wrap: wrap; padding: 0 15px; }
+          .filter-tag { padding: 8px 14px; font-size: 10px; border-radius: 10px; }
+          .hero-section { padding: 180px 25px 80px; }
+          .reveal-text { font-size: 36px; margin-bottom: 25px; }
           .fade-in-delay { font-size: 15px; }
-          
           .projects-section { padding: 0 25px 80px; }
-          .projects-grid { 
-            grid-template-columns: 1fr; 
-            gap: 50px;
-          }
-          
-          .project-card:nth-child(even) { 
-            transform: translateY(0) !important; 
-          }
-          
+          .projects-grid { grid-template-columns: 1fr; gap: 50px; }
+          .project-card:nth-child(even) { transform: translateY(0) !important; }
           .project-details h3 { font-size: 20px; }
           .category-tag { font-size: 10px; }
-          
           .archive-wrapper { margin-top: 80px; }
-          .archive-toggle-btn { 
-            padding: 15px 25px; 
-            font-size: 14px;
-            gap: 10px;
-          }
-          .archive-grid { 
-            grid-template-columns: 1fr; 
-            gap: 20px; 
-            margin-top: 40px;
-          }
-          
+          .archive-toggle-btn { padding: 15px 25px; font-size: 14px; gap: 10px; }
+          .archive-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
           .project-overlay { padding: 20px; }
-          .project-modal { 
-            height: 90vh; 
-            border-radius: 20px;
-          }
-          .modal-body { 
-            grid-template-columns: 1fr; 
-            overflow-y: auto;
-          }
-          .modal-info { 
-            padding: 40px 25px; 
-            border-right: none;
-            border-bottom: 1px solid var(--glass-border);
-          }
+          .project-modal { height: 90vh; border-radius: 20px; }
+          .modal-body { grid-template-columns: 1fr; overflow-y: auto; }
+          .modal-info { padding: 40px 25px; border-right: none; border-bottom: 1px solid var(--glass-border); }
           .modal-info h2 { font-size: 24px; }
-          .close-modal { 
-            top: 15px; 
-            right: 15px; 
-            width: 36px; 
-            height: 36px;
-          }
-          
+          .close-modal { top: 15px; right: 15px; width: 36px; height: 36px; }
           .main-footer { padding: 80px 0 40px; }
           .footer-container { padding: 0 25px; }
-          .footer-heading { 
-            font-size: 32px; 
-            margin-bottom: 40px;
-          }
-          .big-link { 
-            font-size: 20px; 
-            gap: 12px;
-          }
-          .footer-bottom { 
-            margin-top: 60px; 
-            flex-direction: column; 
-            gap: 20px; 
-            align-items: flex-start;
-          }
+          .footer-heading { font-size: 32px; margin-bottom: 40px; }
+          .big-link { font-size: 20px; gap: 12px; }
+          .footer-bottom { margin-top: 60px; flex-direction: column; gap: 20px; align-items: flex-start; }
         }
 
         @media (max-width: 400px) {
