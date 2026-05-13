@@ -280,7 +280,7 @@ const App = () => {
       { id: 'a70', cat: "Печатная графика", year: 2025, img: "images/северные вести/1.png",       pdf: "images/северные вести/2.pdf" },
       { id: 'a69', cat: "Печатная графика", year: 2026, img: "images/фундуклеевка/1.png",         pdf: "images/фундуклеевка/2.pdf" },
       { id: 'a68', cat: "Веб-дизайн",       year: 2026, img: "images/travelmood/1.png",           pdf: "images/travelmood/2.pdf" },
-      { id: 'a67', cat: "Веб-дизайн",       year: 2025, img: "images/я+моидрузья/1.png",          pdf: "images/я+моидрузья/2.pdf" },
+      { id: 'a67', cat: "Веб-дизайн",       year: 2025, img: "images/ямоидрузья/1.png",          pdf: "images/я+моидрузья/2.pdf" },
       { id: 'a66', cat: "Печатная графика", year: 2025, img: "images/дипломы/1.png",              pdf: "images/дипломы/2.pdf" },
       { id: 'a65', cat: "Айдентика",        year: 2025, img: "images/qarma/1.png",                pdf: "images/qarma/2.pdf" },
       { id: 'a64', cat: "Печатная графика", year: 2025, img: "images/плакат день учителя/1.png",  pdf: "images/плакат день учителя/2.pdf" },
