@@ -275,6 +275,7 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
+      { id: 'a73', cat: "Печатная графика",        year: 2026, img: "images/sportbuklet/1.png",  pdf: "images/sportbuklet/2.pdf" },
       { id: 'a72', cat: "Айдентика",        year: 2026, img: "images/космическая станция/1.png",  pdf: "images/космическая станция/2.pdf" },
       { id: 'a71', cat: "Печатная графика", year: 2026, img: "images/тихий сигнал/1.png",        pdf: "images/тихий сигнал/2.pdf" },
       { id: 'a70', cat: "Печатная графика", year: 2025, img: "images/северные вести/1.png",       pdf: "images/северные вести/2.pdf" },
