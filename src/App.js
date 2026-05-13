@@ -477,21 +477,30 @@ const App = () => {
                 <div className="modal-year">{t.modal.year}: {selectedProject.year}</div>
               </div>
               <div className="modal-viewer">
-                {selectedProject.pdf && selectedProject.pdf.endsWith('.pdf') ? (
-                  <iframe src={selectedProject.pdf} title="PDF" width="100%" height="100%" />
-                ) : Array.isArray(selectedProject.gallery) ? (
-                  <div className="modal-gallery">
-                    {selectedProject.gallery.map((image, index) => (
-                      <img key={index} src={image} alt={`slide-${index}`} className="gallery-img" />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="pdf-placeholder">
-                    <img src={selectedProject.img} alt="preview" />
-                    <p>{lang === 'ru' ? 'Презентация загружается или в разработке' : 'Presentation loading or in development'}</p>
-                  </div>
-                )}
-              </div>
+  {selectedProject.pdf && selectedProject.pdf.endsWith('.pdf') ? (
+    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
+      <div className="pdf-mobile">
+        <p>{lang === 'ru' ? 'Просмотр PDF недоступен на мобильных' : 'PDF preview not available on mobile'}</p>
+        <a href={selectedProject.pdf} target="_blank" rel="noopener noreferrer" className="pdf-open-btn">
+          {lang === 'ru' ? 'Открыть PDF' : 'Open PDF'}
+        </a>
+      </div>
+    ) : (
+      <iframe src={selectedProject.pdf} title="PDF" width="100%" height="100%" />
+    )
+  ) : Array.isArray(selectedProject.gallery) ? (
+    <div className="modal-gallery">
+      {selectedProject.gallery.map((image, index) => (
+        <img key={index} src={image} alt={`slide-${index}`} className="gallery-img" />
+      ))}
+    </div>
+  ) : (
+    <div className="pdf-placeholder">
+      <img src={selectedProject.img} alt="preview" />
+      <p>{lang === 'ru' ? 'Презентация загружается или в разработке' : 'Presentation loading or in development'}</p>
+    </div>
+  )}
+</div>
             </div>
           </div>
         </div>
@@ -595,6 +604,24 @@ const App = () => {
         .modal-info h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin: 20px 0; }
         .modal-info p { color: var(--text-dim); line-height: 1.6; }
         .modal-viewer { background: #111; }
+        .pdf-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+  color: white;
+}
+
+.pdf-open-btn {
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
 
         .main-footer { background: #050507; padding: 150px 0 60px; border-top: 1px solid var(--glass-border); position: relative; overflow: hidden; }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 50px; }
