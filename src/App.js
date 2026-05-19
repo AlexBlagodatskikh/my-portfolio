@@ -278,7 +278,7 @@ const App = () => {
   // ─────────────────────────────────────────────────────────────────────────────
   const projectsData = useMemo(() => ({
     featured: [
-{ id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
+
 { id: 'a77', cat: "Веб-дизайн",        year: 2026, img: "images/setka/1.png",  pdf: "images/setka/2.pdf" },
       { id: 'f1', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/5.png",            pdf: "images/избранное/autohub/autohub.pdf" },
       { id: 'f2', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/4.png",            pdf: "images/избранное/autopart/autopart.pdf" },
@@ -288,6 +288,7 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
+{ id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
       { id: 'pwg24m', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
 
