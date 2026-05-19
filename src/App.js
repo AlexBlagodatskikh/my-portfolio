@@ -37,6 +37,7 @@ const translations = {
       'Печатная графика': 'Печатная графика'
     },
     projects: {
+      pwg24m: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций фенька на каждый месяц" },
       p0462: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций на каждый месяц с милым феньком" },
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
       f2: { title: "AUTOPART - онлайн магазин автозапчастей (сайт)", desc: "Прототип онлайн магазина автозапчастей в формате вайрфреймов и финальном виде." },
@@ -158,6 +159,7 @@ const translations = {
       'Печатная графика': 'Print Graphics'
     },
     projects: {
+      pwg24m: { title: "Fennec calendar", desc: "12 illustrations of fennec were drawn for each month" },
       p0462: { title: "Fennec calendar", desc: "12 illustrations drawn for each month with a cute fennec" },
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
       f2: { title: "AUTOPART - online auto parts store (website)", desc: "Online auto parts store prototype in wireframe and final format." },
@@ -285,6 +287,8 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
+      { id: 'pwg24m', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
+
 { id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
       { id: 'p0462', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
