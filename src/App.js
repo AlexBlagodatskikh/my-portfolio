@@ -38,8 +38,6 @@ const translations = {
     },
     // В блоке ru:
     projects: {
-            a1585: { title: "Календарь Фенек", desc: "Отрисовано 12 иллюстраций с милым феньком на каждый месяц" },
-p5887: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций милого фенька на каждый месяц" },
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
       f2: { title: "AUTOPART - онлайн магазин автозапчастей (сайт)", desc: "Прототип онлайн магазина автозапчастей в формате вайрфреймов и финальном виде." },
@@ -47,6 +45,7 @@ p5887: { title: "Календарь "Фенек"", desc: "Отрисовано 1
       f4: { title: "EVENTIFLY - организация концертов (брендбук)", desc: "Брендбук для компании Eventifly." },
       f5: { title: "Океан (фото-коллаж)", desc: "Фото-коллаж с собственными фотографиями, может быть использован в качестве принта на одежду." },
       f6: { title: "Мошенники: инструкция по обезвреживанию (лонгрид)", desc: "Лонгрид на конкурс о том, как избежать мошеннических схем." },
+      p5887: { title: "Календарь Фенек", desc: "Отрисовано 12 иллюстраций милого фенька на каждый месяц" },
       a77: { title: "Прототип лендинга сайта для курсов по дизайну Сетка", desc: "Прототип экранов сайта." },
       a76: { title: "Дизайн серии упаковок для трюфельных конфет Хрюкля", desc: "Дизайн для трех упаковок конфет." },
       a75: { title: "Векторные иллюстрации Красная Шапочка", desc: "Векторная графика по мотивам сказки." },
@@ -162,8 +161,7 @@ p5887: { title: "Календарь "Фенек"", desc: "Отрисовано 1
     },
     // В блоке en:
     projects: {
-            a1585: { title: "Fennec calendar", desc: "12 illustrations with a cute fennec fox for each month have been drawn." },
-p5887: { title: "Fennec calendar", desc: "12 illustrations of a cute fennec fox drawn for each month" },
+      p5887: { title: "Fennec calendar", desc: "12 illustrations of a cute fennec fox drawn for each month" },
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
       f2: { title: "AUTOPART - online auto parts store (website)", desc: "Online auto parts store prototype in wireframe and final format." },
@@ -292,11 +290,7 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
-      { id: 'a1585', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx-xxxxx-a1585/1.png", pdf: "images/xxxxxxxxx-xxxxx-a1585/2.pdf" },
-
       { id: 'p5887', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
-
-      { id: 'n99170', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
 { id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
 
