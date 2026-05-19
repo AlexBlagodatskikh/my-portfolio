@@ -38,6 +38,7 @@ const translations = {
     },
     // В блоке ru:
     projects: {
+      p5887: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций милого фенька на каждый месяц" },
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
       f2: { title: "AUTOPART - онлайн магазин автозапчастей (сайт)", desc: "Прототип онлайн магазина автозапчастей в формате вайрфреймов и финальном виде." },
@@ -160,6 +161,7 @@ const translations = {
     },
     // В блоке en:
     projects: {
+      p5887: { title: "Fennec calendar", desc: "12 illustrations of a cute fennec fox drawn for each month" },
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
       f2: { title: "AUTOPART - online auto parts store (website)", desc: "Online auto parts store prototype in wireframe and final format." },
@@ -288,6 +290,8 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
+      { id: 'p5887', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
+
       { id: 'n99170', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
 { id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
