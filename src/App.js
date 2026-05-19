@@ -37,9 +37,7 @@ const translations = {
       'Печатная графика': 'Печатная графика'
     },
     projects: {
-      n99170: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций фенька на каждый месяц" },
-      pwg24m: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций фенька на каждый месяц" },
-      p0462: { title: "Календарь "Фенек"", desc: "Отрисовано 12 иллюстраций на каждый месяц с милым феньком" },
+      /* PROJECTS_START */
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
       f2: { title: "AUTOPART - онлайн магазин автозапчастей (сайт)", desc: "Прототип онлайн магазина автозапчастей в формате вайрфреймов и финальном виде." },
       f3: { title: "Картина мира - конкурсная работа (векторная иллюстрация)", desc: "Работа выполнена в программе Adobe Illutrator в векторной графике на конкурс от Комус Арт." },
@@ -160,9 +158,7 @@ const translations = {
       'Печатная графика': 'Print Graphics'
     },
     projects: {
-      n99170: { title: "Fennec calendar", desc: "12 illustrations of fennec were drawn for each month" },
-      pwg24m: { title: "Fennec calendar", desc: "12 illustrations of fennec were drawn for each month" },
-      p0462: { title: "Fennec calendar", desc: "12 illustrations drawn for each month with a cute fennec" },
+      /* PROJECTS_START */
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
       f2: { title: "AUTOPART - online auto parts store (website)", desc: "Online auto parts store prototype in wireframe and final format." },
       f3: { title: "World Picture - competition work (vector illustration)", desc: "Vector graphics work created in Adobe Illustrator for Komus Art competition." },
@@ -293,10 +289,6 @@ const App = () => {
       { id: 'n99170', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
 { id: 'f3', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/1.png",            pdf: "images/избранное/mir/картина мира.pdf" },
-      { id: 'pwg24m', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
-
-
-      { id: 'p0462', cat: "Печатная графика", year: 2026, img: "images/xxxxxxxxx--xxxxx-/1.png", pdf: "images/xxxxxxxxx--xxxxx-/2.pdf" },
 
  { id: 'a78', cat: "Айдентика", year: 2026, img: "images/shriftovye-pary/1.jpg", pdf: "images/shriftovye-pary/2.pdf" },
       
