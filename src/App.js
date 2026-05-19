@@ -36,6 +36,7 @@ const translations = {
       'Веб-дизайн': 'Веб-дизайн',
       'Печатная графика': 'Печатная графика'
     },
+    // В блоке ru:
     projects: {
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - социальная сеть для автолюбителей (сайт)", desc: "Прототип социальной сети для автолюбителей в формате вайрфреймов и финальном виде." },
@@ -157,6 +158,7 @@ const translations = {
       'Веб-дизайн': 'Web Design',
       'Печатная графика': 'Print Graphics'
     },
+    // В блоке en:
     projects: {
       /* PROJECTS_START */
       f1: { title: "AUTOHUB - social network for car enthusiasts (website)", desc: "Social network prototype for car enthusiasts in wireframe and final format." },
