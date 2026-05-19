@@ -43,6 +43,7 @@ const translations = {
       f4: { title: "EVENTIFLY - организация концертов (брендбук)", desc: "Брендбук для компании Eventifly." },
       f5: { title: "Океан (фото-коллаж)", desc: "Фото-коллаж с собственными фотографиями, может быть использован в качестве принта на одежду." },
       f6: { title: "Мошенники: инструкция по обезвреживанию (лонгрид)", desc: "Лонгрид на конкурс о том, как избежать мошеннических схем." },
+      a77: { title: "Прототип лендинга сайта для курсов по дизайну Сетка", desc: "Прототип экранов сайта." },
       a76: { title: "Дизайн серии упаковок для трюфельных конфет Хрюкля", desc: "Дизайн для трех упаковок конфет." },
       a75: { title: "Векторные иллюстрации Красная Шапочка", desc: "Векторная графика по мотивам сказки." },
       a74: { title: "Редизайн брошюры FREEZONE", desc: "Печатная графика для спортивно-развлекательного комплекса." },
@@ -279,7 +280,8 @@ const App = () => {
       { id: 'f6', cat: "Веб-дизайн",       year: 2025, img: "images/избранное/лонгрид/1.png",    pdf: "images/избранное/лонгрид/2.pdf" },
     ],
     archive: [
-      { id: 'a75', cat: "Печатная графика",        year: 2026, img: "images/upakovka/1.png",  pdf: "images/upakovka/2.pdf" },
+      { id: 'a77', cat: "Веб-дизайн",        year: 2026, img: "images/setka/1.png",  pdf: "images/setka/2.pdf" },
+      { id: 'a76', cat: "Печатная графика",        year: 2026, img: "images/upakovka/1.png",  pdf: "images/upakovka/2.pdf" },
       { id: 'a75', cat: "Веб-дизайн",        year: 2026, img: "images/krasnaya-shapochka/1.png",  pdf: "images/krasnaya-shapochka/2.pdf" },
       { id: 'a74', cat: "Печатная графика",        year: 2026, img: "images/peredelka-broshuri/1.png",  pdf: "images/peredelka-broshuri/2.pdf" },
       { id: 'a73', cat: "Печатная графика",        year: 2026, img: "images/sportbuklet/1.png",  pdf: "images/sportbuklet/2.pdf" },
